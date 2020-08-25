@@ -9,7 +9,7 @@ const issue2options = {
   origin: true,
   methods: ["GET","POST"],
   credentials: true,
-  maxAge: 3600 * 24
+  maxAge: Date.now() + 4976640
 };
 
 
