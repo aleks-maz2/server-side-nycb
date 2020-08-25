@@ -22,7 +22,7 @@ app.use(cookieParser({
 }));
 
 app.get('/', (req,res) => {
-  console.log(req.cookies)
+  console.log(req)
   res.send('Its true')
 })
 
