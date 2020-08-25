@@ -22,7 +22,8 @@ app.use(cookieParser({
 }));
 
 app.get('/', (req,res) => {
-  res.send('ds')
+  console.log(req.cookies)
+  res.send('Its true')
 })
 
 app.post('/login', (req, res) => {
