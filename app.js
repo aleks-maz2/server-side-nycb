@@ -21,6 +21,10 @@ app.use(cookieParser({
   httpOnly: false, // The cookie only accessible by the web server
 }));
 
+app.get('/', (req,res) => {
+  res.send('ds')
+})
+
 app.post('/login', (req, res) => {
 
   res.cookie('auth', 'fisojenwffjewakj2395235asdwqf', {maxAge: 1000 * 120 * 15,httpOnly: false})
