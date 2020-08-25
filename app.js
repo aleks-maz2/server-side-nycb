@@ -22,13 +22,13 @@ app.use(cookieParser({
 }));
 
 app.get('/', (req,res) => {
-  console.log(req)
+  console.log(req.cookies.auth)
   res.send('Its true')
 })
 
 app.post('/login', (req, res) => {
 
-  res.cookie('auth', 'fisojenwffjewakj2395235asdwqf', {maxAge: 1000 * 120 * 15,httpOnly: false})
+  res.cookie('auth', 'fisojenwffjewakj2395235asdwqf', {maxAge: Date.now() + 10800,httpOnly: false})
   res.status(200).json({msg: 'Test Server'})
 })
 
